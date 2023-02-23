@@ -10,15 +10,23 @@
 <body>
     <div>
         <form>
-            <label for="km">Km da percorrere:</label><br>
+            <label for="dati">Nome Cognome</label><br>
+            <input type="text" id="dati"><br>
+
+            <label for="km">Km da percorrere</label><br>
             <input type="text" id="km"><br>
+
+            <label for="eta">Fascia d'eta</label><br>
+            <select id="selezioneEta">
+                <option value="17" id="minorenne">Minorenne</option>
+                <option value="20">Maggiorenne</option>
+                <option value="70">Anziano</option>
+            </select>
         </form>
-        <form>
-            <label for="eta">eta</label><br>
-            <input type="text" id="eta"><br>
-        </form>
-        
-        
+        <button id="btn" type="button">Genera</button>
+    </div>
+    <div>
+
     </div>
     <script src="js/main.js"></script>
 </body>
