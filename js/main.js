@@ -5,11 +5,16 @@
 //va applicato uno sconto del 40% per gli over 65.
 //L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
-
+//BIGLIETTO
+const bigliettoTreno = document.getElementById('biglietto');
+bigliettoTreno.classList.add('d-none');
 
 const domButton = document.getElementById('btn');                    //punto al bottone
 domButton.addEventListener('click',                                  //creo una condizione di ascolto nella quale inserisco le mie funzioni 
     function(){
+        //BIGLIETTO
+        const bigliettoTrenoOn = document.getElementById('biglietto');
+        bigliettoTrenoOn.classList.add('d-flex');
 
         //NOME E COGNOME
         const domDati = document.getElementById('dati');
