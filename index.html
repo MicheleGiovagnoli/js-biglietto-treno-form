@@ -6,31 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto treno</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="imput">
-        <form>
-            <label for="dati">Nome Cognome</label><br>
-            <input type="text" id="dati"><br>
+    <div class="container">
+        <h1>
+            <i class="fa-solid fa-arrow-down"></i>
+             CALCOLA IL PREZZO DEL BIGLIETTO 
+             <i class="fa-solid fa-arrow-down"></i>
+        </h1>
+        <div class="imput">
+            <form>
+                <label for="dati">Nome Cognome</label><br>
+                <input type="text" id="dati"><br>
 
-            <label for="km">Km da percorrere</label><br>
-            <input type="text" id="km"><br>
+                <label for="km">Km da percorrere</label><br>
+                <input type="text" id="km"><br>
 
-            <label for="eta">Fascia d'eta</label><br>
-            <select id="selezioneEta">
-                <option value="17">Minorenne</option>
-                <option value="20">Maggiorenne</option>
-                <option value="70">Anziano</option>
-            </select>
+                <label for="eta">Fascia d'eta</label><br>
+                <select id="selezioneEta">
+                    <option value="17">Minorenne</option>
+                    <option value="20">Maggiorenne</option>
+                    <option value="70">Anziano</option>
+                </select>
 
-            <button id="btn" type="button">Genera</button>
-            <button id="btn-annulla" type="button">Annulla</button>
-        </form>
-    </div>
-
-    <div id="biglietto">
-         <h2>Dettagli passeggero</h2>
-         <div>
+                <button id="btn" type="button">Genera</button>
+                <button id="btn-annulla" type="button">Annulla</button>
+            </form>
+        </div>
+        <h1>
+            <i class="fa-solid fa-arrow-down"></i>
+             BIGLIETTO 
+            <i class="fa-solid fa-arrow-down"></i>
+        </h1>
+        <div id="biglietto">
+            <h2>Dettagli passeggero</h2>
             <div>
                 <h3>Nome passeggero</h3>
                 <span id="nome"></span>
@@ -51,11 +61,9 @@
                 <h3>Costo biglietto</h3>
                 <span id="costo"></span>
             </div>
-         </div>
-    </div>
-    <div>
+        </div>
 
+        <script src="js/main.js"></script>
     </div>
-    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,12 +3,62 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body{
+    height: 100vh;
+    background-image: url(../img/regionale-trenitalia.png);
+    background-size:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* CONTAINER */
+.container{
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: white;
+}
+.container h1 {
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0px;
+}
+/* CONTAINER */
 /* IMPUT */
 .imput {
-    background-color: burlywood;
+    background-color: rgb(79, 151, 20);
     display: flex;
     justify-content: center;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
 }
+.imput form input, select, button{
+    border-radius: 5px;
+    border: 2px solid rgb(165, 42, 42);
+    padding: 5px;
+}
+/* IMPUT */
+
+/* BIGLIETTO */
+#biglietto {
+    background-color: rgb(79, 151, 20);
+    justify-content: space-around;
+    margin: 10px 0px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}
+/* BIGLIETTO */
 
 .d-none {
     display: none;

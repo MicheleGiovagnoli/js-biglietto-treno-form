@@ -9,6 +9,7 @@
 const bigliettoTreno = document.getElementById('biglietto');
 bigliettoTreno.classList.add('d-none');
 
+//bottone GENERA
 const domButton = document.getElementById('btn');                    //punto al bottone
 domButton.addEventListener('click',                                  //creo una condizione di ascolto nella quale inserisco le mie funzioni 
     function(){
