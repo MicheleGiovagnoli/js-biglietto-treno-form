@@ -11,20 +11,29 @@ const domButton = document.getElementById('btn');                    //punto al 
 domButton.addEventListener('click',                                  //creo una condizione di ascolto nella quale inserisco le mie funzioni 
     function(){
 
-        //Chideo all'utente Nome e Cognome che verra stampato direttamente nel biglietto
+        //NOME E COGNOME
         const domDati = document.getElementById('dati');
         const domNomeCognome = domDati.value;
+        document.getElementById('nome').innerHTML = `${domNomeCognome}`;
         console.log(domNomeCognome);
-        
-        //Chideo all'utente i chilometri che vuole percorrere
+
+        //CHILOMETRI
         const domChilometri = document.getElementById('km');         //Punto all'imput nell'html
         const domKm = domChilometri.value;                           //con value ne estraggo il valore e lo metto in domKm
         console.log(domKm);
 
-        //Chiedo all'utente la sua eta
+        //ETA
         const selezioneEta = document.getElementById('selezioneEta');//punto all'imput
         const eta = selezioneEta.value;                              // e avendo dato un valore numerico nell'html lo estraggo e lo metto in eta
         console.log(eta);
+
+        //CARROZZA
+        const numeroCasuale = Math.floor((Math.random() * 10));
+        document.getElementById('carrozza').innerHTML = `${numeroCasuale}`;
+
+        //CODICE CP
+        const numeroCasualeGrande = Math.floor((Math.random() * 99999) );
+        document.getElementById('codice').innerHTML = `${numeroCasualeGrande}`;
 
         //Calcolo il prezzo di base
         const prezzoBase = domKm * 0.21;
@@ -32,25 +41,36 @@ domButton.addEventListener('click',                                  //creo una 
         //Calcolo i relattivi prezzi in base agli sconti del 20 per minori e del 40 per anziani
         let prezzoAnziani;
         let prezzoMinori;
+
         if( eta < 18 ) {
             prezzoMinori = ( ( prezzoBase * 20 ) / 100);
-            prezzoMinori = prezzoBase - prezzoMinori;
-            prezzoMinori = prezzoMinori.toFixed(2);
-            console.log(prezzoMinori);
+             prezzoMinori = prezzoBase - prezzoMinori;
+              prezzoMinori = prezzoMinori.toFixed(2);
+               const domOfferta = 'Biglietto Standard';
+                document.getElementById('offerta').innerHTML = `Sconto del 20%`;
+                document.getElementById('costo').innerHTML = `${prezzoMinori}€`;
+                 console.log(prezzoMinori);
         
         } else if( eta > 65 ) {
             prezzoAnziani = ( ( prezzoBase * 40 ) / 100);
-            prezzoAnziani = prezzoBase - prezzoAnziani;
-            prezzoAnziani = prezzoAnziani.toFixed(2);
-            console.log(prezzoAnziani);
+             prezzoAnziani = prezzoBase - prezzoAnziani;
+              prezzoAnziani = prezzoAnziani.toFixed(2);
+               const domOfferta = 'Biglietto Standard';
+                document.getElementById('offerta').innerHTML = `Sconto del 40% `;
+                document.getElementById('costo').innerHTML = `${prezzoAnziani}€`;
+                 console.log(prezzoAnziani);
         }
         else if (eta > 18 || eta < 65) {
-            console.log(prezzoBase);
+            const domOfferta = 'Biglietto Standard';
+             document.getElementById('offerta').innerHTML = `Biglietto Standard`;
+             document.getElementById('costo').innerHTML = `${prezzoBase}€`;
+              console.log(prezzoBase);
         }
 
         else {
             console.log("Valore non accettato")
         }
+        
     }
 );
 
