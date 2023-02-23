@@ -74,9 +74,19 @@ domButton.addEventListener('click',                                  //creo una 
 
         else {
             console.log("Valore non accettato")
-        }
-        
+        } 
     }
 );
+
+//bottone di reset
+const domButtonReset = document.getElementById('btn-annulla');
+
+domButtonReset.addEventListener('click',
+    function(){
+        const bigliettoTreno = document.getElementById('biglietto');
+        bigliettoTreno.classList.remove('d-flex');
+    }
+);
+
 
 
